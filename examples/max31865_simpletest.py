@@ -3,16 +3,26 @@
 
 # Simple demo of the MAX31865 thermocouple amplifier.
 # Will print the temperature every second.
-import time
-import board
-import digitalio
-import adafruit_max31865
 
+# fork SoratobuMacaroniPenguin
+# for Micropython-1.23.0 later
+
+import time
+import machine as board
+import machine import Pin , SoftSPI
+#import digitalio
+import max31865 as adafruit_max31865 
+MISO =　16
+MOSI = 5
+SCK = 4
+CS = 0
 
 # Create sensor object, communicating over the board's default SPI bus
-spi = board.SPI()
-cs = digitalio.DigitalInOut(board.D5)  # Chip select of the MAX31865 board.
-sensor = adafruit_max31865.MAX31865(spi, cs)
+#spi = board.SPI()
+spi = SoftSPI(baudrate=200000, polarity=1, phase=0, sck=Pin(SCK), mosi=Pin(MOSI), miso=Pin(MISO))
+#cs = digitalio.DigitalInOut(board.D5)  # Chip select of the MAX31865 board.
+cs = CS
+sensor = adafruit_max31865.Max31865(spi, cs , rtd_nominal=100, ref_resistor=430.0, wires=3,misoPin=MISO,mosiPin=MOSI,sckPin=SCK)
 # Note you can optionally provide the thermocouple RTD nominal, the reference
 # resistance, and the number of wires for the sensor (2 the default, 3, or 4)
 # with keyword args:
