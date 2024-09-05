@@ -4,6 +4,10 @@ I hope to use Adafruit MAX31865 compatible  on Wemos mini and Micropython
 
 /Examples/MAX31865_simpletest.py and MAX31865 library used simple tempature 
 
+Wemos mini compatible
+Adafruit MAX31865 compatible
+Micropython-1.23.0
+
 ============
 
 Introduction
