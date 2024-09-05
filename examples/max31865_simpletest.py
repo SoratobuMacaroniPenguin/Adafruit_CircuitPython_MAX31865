@@ -12,7 +12,7 @@ import machine as board
 from machine import Pin , SoftSPI
 #import digitalio
 import max31865 as adafruit_max31865 
-MISO =　16
+MISO = 16
 MOSI = 5
 SCK = 4
 CS = 0
