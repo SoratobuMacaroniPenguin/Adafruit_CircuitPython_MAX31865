@@ -1,10 +1,10 @@
 write SoratobuMacaroniPenguin
 
-I hope to use Adafruit MAX31865 compatible  on Wemos mini and Micropython 
+I hope to use Adafruit MAX31865 compatible on Wemos mini and Micropython 
 
-/examples/MAX31865_simpletest.py and MAX31865 library used simple tempature 
+/examples/MAX31865_simpletest.py and MAX31865.py library used simple tempature 
 
-+ Wemos mini compatible
++ Wemos mini compatible (ESP8266)
 + Adafruit MAX31865 compatible
 + Micropython-1.23.0
 
