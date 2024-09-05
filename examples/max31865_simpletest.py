@@ -9,7 +9,7 @@
 
 import time
 import machine as board
-import machine import Pin , SoftSPI
+from machine import Pin , SoftSPI
 #import digitalio
 import max31865 as adafruit_max31865 
 MISO =　16
